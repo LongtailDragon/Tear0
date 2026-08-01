@@ -1,0 +1,29 @@
+{
+  "hardware": {
+    "has_nvidia_gpu": false,
+    "gpu_name": null,
+    "vram_mb": null,
+    "cuda_available": false
+  },
+  "whisper": {
+    "model_size": "tiny.en",
+    "device": "cpu",
+    "compute_type": "int8",
+    "cpu_threads": 4,
+    "beam_size": 1,
+    "language": "en"
+  },
+  "hermes_executable": "hermes",
+  "session_root": "%TEMP%\\Tear0\\sessions",
+  "kokoro_model_path": "%USERPROFILE%\\.tear0\\models\\kokoro-v1.0.onnx",
+  "kokoro_voices_path": "%USERPROFILE%\\.tear0\\models\\voices-v1.0.bin",
+  "kokoro_voice": "af_heart",
+  "tts_tail_padding_ms": 400,
+  "sample_rate": 16000,
+  "vad_aggressiveness": 2,
+  "silence_ms": 700,
+  "speech_start_frames": 3,
+  "speech_rms_threshold": 500,
+  "pre_speech_ms": 450,
+  "max_utterance_seconds": 30
+}

@@ -1,0 +1,60 @@
+[project]
+name = "tear0"
+version = "0.1.0"
+description = "Turn-based voice + vision desktop support loop for Hermes Agent"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+  { name = "Longtail Dragon" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "sounddevice>=0.5.0",
+  "soundfile>=0.12.1",
+  "webrtcvad-wheels>=2.0.14",
+  "mss>=9.0.1",
+  "Pillow>=10.0",
+  "faster-whisper>=1.0.3",
+  "nvidia-cublas-cu12>=12.0; platform_system == 'Windows'",
+  "nvidia-cudnn-cu12>=9.0; platform_system == 'Windows'",
+  "kokoro-onnx>=0.4.0",
+  "requests>=2.31",
+  "platformdirs>=4.2",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+build = ["pyinstaller>=6.0"]
+
+[project.scripts]
+tear0 = "tear0.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/LongtailDragon/Tear0"
+Repository = "https://github.com/LongtailDragon/Tear0"
+Issues = "https://github.com/LongtailDragon/Tear0/issues"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tear0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
