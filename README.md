@@ -2,6 +2,8 @@
 
 Tear0 is a local*, turn-based voice + vision support loop extension for Hermes Agent. It simulates the experience of being on the phone with a tech support agent who is viewing your screen with TeamViewer or a similar screensharing tool.
 
+Demo Video: https://www.loom.com/share/ec65843513124e49aa473f9a930c0e7a
+
 Flow:
 1. Start Tear0 from `Tear0.bat` or `dist/Tear0.exe`.
 2. Pick one of your displays for Tear0 to watch.
